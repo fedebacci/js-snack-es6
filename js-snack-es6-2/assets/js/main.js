@@ -29,12 +29,22 @@ const teamsFouls = [];
 for (const team of footballTeams) {
     team.puntiFatti = generateRandomNumber(0, 12);
     team.falliSubiti =  generateRandomNumber(0, 50);
-
-    const teamFouls = {
-        nome: team.nome,
-        falliSubiti: team.falliSubiti
-    };
-    teamsFouls.push(teamFouls);
+    
+    // # FATTO CON DICHIARAZIONE "CLASSICA"
+    // const teamFouls = {
+    //     nome: team.nome,
+    //     falliSubiti: team.falliSubiti
+    // };
+    // # FATTO CON DESTRUCTURING E ASSEGNAZIONE VELOCE DELLE COSTANTI
+    // * DESTRUCTURING DELL'OGGETTO TEAM PER OTTENERE LE DUE COSTANTI
+    const {nome, falliSubiti} = team;
+    // - PASSANDO DA COSTANTE
+    // * ASSEGNAZIONE VELOCE DELLE DUE COSTANTI AL NUOVO OGGETTO
+    // const teamFouls = {nome, falliSubiti}
+    // teamsFouls.push(teamFouls);
+    // - INSERITI DIRETTAMENTE IN ARRAY
+    // * ASSEGNAZIONE VELOCE DELLE DUE COSTANTI AL NUOVO OGGETTO
+    teamsFouls.push({nome, falliSubiti});
 };
 
 console.table(footballTeams);
