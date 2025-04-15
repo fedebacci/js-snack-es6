@@ -24,21 +24,21 @@ const footballTeams = [
         falliSubiti: 0
     }
 ];
-const newArray = [];
+const teamsFouls = [];
 
 for (team of footballTeams) {
     team.puntiFatti = generateRandomNumber(0, 12);
     team.falliSubiti =  generateRandomNumber(0, 50);
 
-    const teamForNewArray = {
+    const teamFouls = {
         nome: team.nome,
         falliSubiti: team.falliSubiti
     };
-    newArray.push(teamForNewArray);
+    teamsFouls.push(teamFouls);
 };
 
 console.table(footballTeams);
-console.table(newArray);
+console.table(teamsFouls);
 
 
 
