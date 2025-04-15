@@ -26,7 +26,7 @@ const footballTeams = [
 ];
 const teamsFouls = [];
 
-for (team of footballTeams) {
+for (const team of footballTeams) {
     team.puntiFatti = generateRandomNumber(0, 12);
     team.falliSubiti =  generateRandomNumber(0, 50);
 
